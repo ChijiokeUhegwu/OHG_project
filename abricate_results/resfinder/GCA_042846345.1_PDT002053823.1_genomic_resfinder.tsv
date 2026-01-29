@@ -1,0 +1,4 @@
+#FILE	SEQUENCE	START	END	STRAND	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT	RESISTANCE
+/home/chijioke/OHG_project/assembled_genome/GCA_042846345.1_PDT002053823.1_genomic.fna	DAXQDT010000002.1	114012	115244	-	mdf(A)_1	1-1233/1233	===============	0/0	100.00	99.43	resfinder	Y08743	mdf(A)	
+/home/chijioke/OHG_project/assembled_genome/GCA_042846345.1_PDT002053823.1_genomic.fna	DAXQDT010000016.1	64919	65794	-	blaCTX-M-55_1	1-876/876	===============	0/0	100.00	100.00	resfinder	DQ810789	blaCTX-M-55	Amoxicillin;Ampicillin;Aztreonam;Cefepime;Cefotaxime;Ceftazidime;Ceftriaxone;Piperacillin;Ticarcillin
+/home/chijioke/OHG_project/assembled_genome/GCA_042846345.1_PDT002053823.1_genomic.fna	DAXQDT010000076.1	1532	2407	+	blaCTX-M-55_1	1-876/876	===============	0/0	100.00	100.00	resfinder	DQ810789	blaCTX-M-55	Amoxicillin;Ampicillin;Aztreonam;Cefepime;Cefotaxime;Ceftazidime;Ceftriaxone;Piperacillin;Ticarcillin

@@ -1,0 +1,8 @@
+#FILE	SEQUENCE	START	END	STRAND	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT	RESISTANCE
+/home/chijioke/OHG_project/assembled_genome/GCA_032537705.1_PDT001815195.1_genomic.fna	DAQCTE010000011.1	46048	47280	-	mdf(A)_1	1-1233/1233	===============	0/0	100.00	87.35	resfinder	Y08743	mdf(A)	
+/home/chijioke/OHG_project/assembled_genome/GCA_032537705.1_PDT001815195.1_genomic.fna	DAQCTE010000048.1	9029	9844	+	aph(3')-Ia_3	1-816/816	===============	0/0	100.00	99.88	resfinder	EF015636	aph(3')-Ia	
+/home/chijioke/OHG_project/assembled_genome/GCA_032537705.1_PDT001815195.1_genomic.fna	DAQCTE010000054.1	1625	2838	-	floR_2	1-1214/1215	===============	0/0	99.92	98.19	resfinder	AF118107	floR	Chloramphenicol;Florfenicol
+/home/chijioke/OHG_project/assembled_genome/GCA_032537705.1_PDT001815195.1_genomic.fna	DAQCTE010000066.1	1198	1854	-	qnrS2_1	1-657/657	===============	0/0	100.00	100.00	resfinder	DQ485530	qnrS2	Ciprofloxacin
+/home/chijioke/OHG_project/assembled_genome/GCA_032537705.1_PDT001815195.1_genomic.fna	DAQCTE010000100.1	2504	3717	+	floR_2	1-1214/1215	===============	0/0	99.92	98.19	resfinder	AF118107	floR	Chloramphenicol;Florfenicol
+/home/chijioke/OHG_project/assembled_genome/GCA_032537705.1_PDT001815195.1_genomic.fna	DAQCTE010000101.1	148	963	+	aph(3')-Ia_3	1-816/816	===============	0/0	100.00	99.88	resfinder	EF015636	aph(3')-Ia	
+/home/chijioke/OHG_project/assembled_genome/GCA_032537705.1_PDT001815195.1_genomic.fna	DAQCTE010000102.1	271	927	+	qnrS2_1	1-657/657	===============	0/0	100.00	100.00	resfinder	DQ485530	qnrS2	Ciprofloxacin

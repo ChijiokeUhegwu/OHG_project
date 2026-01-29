@@ -1,0 +1,11 @@
+#FILE	SEQUENCE	START	END	STRAND	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT	RESISTANCE
+/home/chijioke/OHG_project/assembled_genome/GCA_029946425.1_ASM2994642v1_genomic.fna	JAOQJA010000003.1	36928	38160	-	mdf(A)_1	1-1233/1233	===============	0/0	100.00	98.46	resfinder	Y08743	mdf(A)	
+/home/chijioke/OHG_project/assembled_genome/GCA_029946425.1_ASM2994642v1_genomic.fna	JAOQJA010000017.1	727	1383	-	qnrS1_1	1-657/657	===============	0/0	100.00	100.00	resfinder	AB187515	qnrS1	Ciprofloxacin
+/home/chijioke/OHG_project/assembled_genome/GCA_029946425.1_ASM2994642v1_genomic.fna	JAOQJA010000017.1	6024	6899	-	blaCTX-M-55_1	1-876/876	===============	0/0	100.00	100.00	resfinder	DQ810789	blaCTX-M-55	Amoxicillin;Ampicillin;Aztreonam;Cefepime;Cefotaxime;Ceftazidime;Ceftriaxone;Piperacillin;Ticarcillin
+/home/chijioke/OHG_project/assembled_genome/GCA_029946425.1_ASM2994642v1_genomic.fna	JAOQJA010000023.1	27511	29134	-	mcr-1.1_1	3-1626/1626	===============	0/0	99.88	100.00	resfinder	KP347127	mcr-1.1	Colistin
+/home/chijioke/OHG_project/assembled_genome/GCA_029946425.1_ASM2994642v1_genomic.fna	JAOQJA010000031.1	2721	3581	-	aac(3)-IId_1	1-861/861	===============	0/0	100.00	99.88	resfinder	EU022314	aac(3)-IId	Gentamicin;Tobramycin
+/home/chijioke/OHG_project/assembled_genome/GCA_029946425.1_ASM2994642v1_genomic.fna	JAOQJA010000032.1	2103	2894	+	sul3_2	1-792/792	===============	0/0	100.00	100.00	resfinder	AJ459418	sul3	Sulfamethoxazole
+/home/chijioke/OHG_project/assembled_genome/GCA_029946425.1_ASM2994642v1_genomic.fna	JAOQJA010000032.1	3152	4012	-	blaTEM-1B_1	1-861/861	===============	0/0	100.00	100.00	resfinder	AY458016	blaTEM-1B	Amoxicillin;Ampicillin;Cephalothin;Piperacillin;Ticarcillin
+/home/chijioke/OHG_project/assembled_genome/GCA_029946425.1_ASM2994642v1_genomic.fna	JAOQJA010000036.1	154	1119	+	ant(3'')-Ia_1	1-970/972	========/======	2/4	99.38	93.20	resfinder	X02340	ant(3'')-Ia	Streptomycin
+/home/chijioke/OHG_project/assembled_genome/GCA_029946425.1_ASM2994642v1_genomic.fna	JAOQJA010000036.1	1253	2074	+	lnu(F)_1	1-822/822	===============	0/0	100.00	100.00	resfinder	EU118119	lnu(F)	Lincomycin
+/home/chijioke/OHG_project/assembled_genome/GCA_029946425.1_ASM2994642v1_genomic.fna	JAOQJA010000045.1	275	757	-	dfrA14_5	1-483/483	===============	0/0	100.00	99.59	resfinder	DQ388123	dfrA14	Trimethoprim

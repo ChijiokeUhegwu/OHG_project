@@ -1,0 +1,10 @@
+#FILE	SEQUENCE	START	END	STRAND	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT	RESISTANCE
+/home/chijioke/OHG_project/assembled_genome/GCA_032537725.1_PDT001815194.1_genomic.fna	DAQCTF010000005.1	105854	107086	+	mdf(A)_1	1-1233/1233	===============	0/0	100.00	87.35	resfinder	Y08743	mdf(A)	
+/home/chijioke/OHG_project/assembled_genome/GCA_032537725.1_PDT001815194.1_genomic.fna	DAQCTF010000041.1	1442	2257	+	sul2_2	1-816/816	===============	0/0	100.00	100.00	resfinder	AY034138	sul2	Sulfamethoxazole
+/home/chijioke/OHG_project/assembled_genome/GCA_032537725.1_PDT001815194.1_genomic.fna	DAQCTF010000048.1	1476	2722	-	tet(A)_6	1-1247/1275	===============	0/0	97.80	100.00	resfinder	AF534183	tet(A)	Doxycycline;Tetracycline
+/home/chijioke/OHG_project/assembled_genome/GCA_032537725.1_PDT001815194.1_genomic.fna	DAQCTF010000052.1	137	925	-	aadA5_1	1-789/789	===============	0/0	100.00	100.00	resfinder	AF137361	aadA5	Streptomycin
+/home/chijioke/OHG_project/assembled_genome/GCA_032537725.1_PDT001815194.1_genomic.fna	DAQCTF010000052.1	1056	1529	-	dfrA17_1	1-474/474	===============	0/0	100.00	100.00	resfinder	FJ460238	dfrA17	Trimethoprim
+/home/chijioke/OHG_project/assembled_genome/GCA_032537725.1_PDT001815194.1_genomic.fna	DAQCTF010000100.1	1483	2298	+	sul2_2	1-816/816	===============	0/0	100.00	100.00	resfinder	AY034138	sul2	Sulfamethoxazole
+/home/chijioke/OHG_project/assembled_genome/GCA_032537725.1_PDT001815194.1_genomic.fna	DAQCTF010000101.1	1018	2264	+	tet(A)_6	1-1247/1275	===============	0/0	97.80	100.00	resfinder	AF534183	tet(A)	Doxycycline;Tetracycline
+/home/chijioke/OHG_project/assembled_genome/GCA_032537725.1_PDT001815194.1_genomic.fna	DAQCTF010000102.1	1651	2124	+	dfrA17_1	1-474/474	===============	0/0	100.00	100.00	resfinder	FJ460238	dfrA17	Trimethoprim
+/home/chijioke/OHG_project/assembled_genome/GCA_032537725.1_PDT001815194.1_genomic.fna	DAQCTF010000102.1	2255	3043	+	aadA5_1	1-789/789	===============	0/0	100.00	100.00	resfinder	AF137361	aadA5	Streptomycin

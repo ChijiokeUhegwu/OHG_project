@@ -1,0 +1,5 @@
+#FILE	SEQUENCE	START	END	STRAND	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT	RESISTANCE
+/home/chijioke/OHG_project/assembled_genome/GCA_045748345.1_ASM4574834v1_genomic.fna	JADOEC010000004.1	71208	72440	-	mdf(A)_1	1-1233/1233	===============	0/0	100.00	97.81	resfinder	Y08743	mdf(A)	
+/home/chijioke/OHG_project/assembled_genome/GCA_045748345.1_ASM4574834v1_genomic.fna	JADOEC010000017.1	92595	93740	+	blaCMY-2_1	1-1146/1146	===============	0/0	100.00	100.00	resfinder	X91840	blaCMY-2	Amoxicillin;Amoxicillin+Clavulanic_acid;Ampicillin;Ampicillin+Clavulanic_acid;Cefotaxime;Cefoxitin;Ceftazidime;Piperacillin;Piperacillin+Tazobactam;Ticarcillin;Ticarcillin+Clavulanic_acid
+/home/chijioke/OHG_project/assembled_genome/GCA_045748345.1_ASM4574834v1_genomic.fna	JADOEC010000027.1	6250	7110	+	blaTEM-1B_1	1-861/861	===============	0/0	100.00	100.00	resfinder	AY458016	blaTEM-1B	Amoxicillin;Ampicillin;Cephalothin;Piperacillin;Ticarcillin
+/home/chijioke/OHG_project/assembled_genome/GCA_045748345.1_ASM4574834v1_genomic.fna	JADOEC010000050.1	1613	2257	-	qnrB19_1	1-645/645	===============	0/0	100.00	100.00	resfinder	EU432277	qnrB19	Ciprofloxacin

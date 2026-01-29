@@ -1,0 +1,6 @@
+#FILE	SEQUENCE	START	END	STRAND	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT	RESISTANCE
+/home/chijioke/OHG_project/assembled_genome/GCA_042849595.1_PDT002053841.1_genomic.fna	DAXQFV010000001.1	9914	11146	+	mdf(A)_1	1-1233/1233	===============	0/0	100.00	98.46	resfinder	Y08743	mdf(A)	
+/home/chijioke/OHG_project/assembled_genome/GCA_042849595.1_PDT002053841.1_genomic.fna	DAXQFV010000087.1	5726	6382	-	qnrS1_1	1-657/657	===============	0/0	100.00	100.00	resfinder	AB187515	qnrS1	Ciprofloxacin
+/home/chijioke/OHG_project/assembled_genome/GCA_042849595.1_PDT002053841.1_genomic.fna	DAXQFV010000087.1	11023	11898	-	blaCTX-M-15_1	1-876/876	===============	0/0	100.00	100.00	resfinder	AY044436	blaCTX-M-15	Amoxicillin;Ampicillin;Aztreonam;Cefepime;Cefotaxime;Ceftazidime;Ceftriaxone;Piperacillin;Ticarcillin
+/home/chijioke/OHG_project/assembled_genome/GCA_042849595.1_PDT002053841.1_genomic.fna	DAXQFV010000161.1	177	1052	+	blaCTX-M-15_1	1-876/876	===============	0/0	100.00	100.00	resfinder	AY044436	blaCTX-M-15	Amoxicillin;Ampicillin;Aztreonam;Cefepime;Cefotaxime;Ceftazidime;Ceftriaxone;Piperacillin;Ticarcillin
+/home/chijioke/OHG_project/assembled_genome/GCA_042849595.1_PDT002053841.1_genomic.fna	DAXQFV010000163.1	1878	2534	+	qnrS1_1	1-657/657	===============	0/0	100.00	100.00	resfinder	AB187515	qnrS1	Ciprofloxacin

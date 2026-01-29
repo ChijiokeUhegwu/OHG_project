@@ -1,0 +1,4 @@
+#FILE	SEQUENCE	START	END	STRAND	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT	RESISTANCE
+/home/chijioke/OHG_project/assembled_genome/GCA_012614385.1_PDT000630068.1_genomic.fna	AASWUA010000001.1	160957	162189	+	mdf(A)_1	1-1233/1233	===============	0/0	100.00	97.97	resfinder	Y08743	mdf(A)	
+/home/chijioke/OHG_project/assembled_genome/GCA_012614385.1_PDT000630068.1_genomic.fna	AASWUA010000094.1	1205	2410	-	tet(B)_2	1-1206/1206	===============	0/0	100.00	100.00	resfinder	AF326777	tet(B)	Doxycycline;Tetracycline;Minocycline
+/home/chijioke/OHG_project/assembled_genome/GCA_012614385.1_PDT000630068.1_genomic.fna	AASWUA010000167.1	1724	2929	+	tet(B)_2	1-1206/1206	===============	0/0	100.00	100.00	resfinder	AF326777	tet(B)	Doxycycline;Tetracycline;Minocycline

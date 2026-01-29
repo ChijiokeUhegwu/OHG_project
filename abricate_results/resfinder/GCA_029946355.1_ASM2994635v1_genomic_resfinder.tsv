@@ -1,0 +1,9 @@
+#FILE	SEQUENCE	START	END	STRAND	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT	RESISTANCE
+/home/chijioke/OHG_project/assembled_genome/GCA_029946355.1_ASM2994635v1_genomic.fna	JAOQIX010000049.1	1076	1936	+	blaTEM-1B_1	1-861/861	===============	0/0	100.00	100.00	resfinder	AY458016	blaTEM-1B	Amoxicillin;Ampicillin;Cephalothin;Piperacillin;Ticarcillin
+/home/chijioke/OHG_project/assembled_genome/GCA_029946355.1_ASM2994635v1_genomic.fna	JAOQIX010000049.1	32818	34441	-	mcr-1.1_1	3-1626/1626	===============	0/0	99.88	100.00	resfinder	KP347127	mcr-1.1	Colistin
+/home/chijioke/OHG_project/assembled_genome/GCA_029946355.1_ASM2994635v1_genomic.fna	JAOQIX010000094.1	1049	2281	-	mdf(A)_1	1-1233/1233	===============	0/0	100.00	98.86	resfinder	Y08743	mdf(A)	
+/home/chijioke/OHG_project/assembled_genome/GCA_029946355.1_ASM2994635v1_genomic.fna	JAOQIX010000102.1	225	698	+	dfrA1_10	1-474/474	===============	0/0	100.00	99.79	resfinder	AF203818	dfrA1	Trimethoprim
+/home/chijioke/OHG_project/assembled_genome/GCA_029946355.1_ASM2994635v1_genomic.fna	JAOQIX010000102.1	781	1582	+	ant(3'')-Ia_1	171-972/972	..=============	0/0	82.51	99.75	resfinder	X02340	ant(3'')-Ia	Streptomycin
+/home/chijioke/OHG_project/assembled_genome/GCA_029946355.1_ASM2994635v1_genomic.fna	JAOQIX010000102.1	2060	2926	+	sul1_5	1-867/867	===============	0/0	100.00	99.89	resfinder	EU780013	sul1	Sulfamethoxazole
+/home/chijioke/OHG_project/assembled_genome/GCA_029946355.1_ASM2994635v1_genomic.fna	JAOQIX010000115.1	1643	2889	+	tet(A)_6	1-1247/1275	===============	0/0	97.80	100.00	resfinder	AF534183	tet(A)	Doxycycline;Tetracycline
+/home/chijioke/OHG_project/assembled_genome/GCA_029946355.1_ASM2994635v1_genomic.fna	JAOQIX010000131.1	910	1731	-	lnu(F)_1	1-822/822	===============	0/0	100.00	100.00	resfinder	EU118119	lnu(F)	Lincomycin

@@ -1,0 +1,8 @@
+#FILE	SEQUENCE	START	END	STRAND	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT	RESISTANCE
+/home/chijioke/OHG_project/assembled_genome/GCA_012662725.1_PDT000660405.1_genomic.fna	AASZMD010000010.1	78668	79900	+	mdf(A)_1	1-1233/1233	===============	0/0	100.00	97.89	resfinder	Y08743	mdf(A)	
+/home/chijioke/OHG_project/assembled_genome/GCA_012662725.1_PDT000660405.1_genomic.fna	AASZMD010000042.1	13433	14299	-	sul1_5	1-867/867	===============	0/0	100.00	99.89	resfinder	EU780013	sul1	Sulfamethoxazole
+/home/chijioke/OHG_project/assembled_genome/GCA_012662725.1_PDT000660405.1_genomic.fna	AASZMD010000042.1	20272	21174	-	aac(3)-VIa_2	1-903/903	===============	0/0	100.00	100.00	resfinder	NC_009838	aac(3)-VIa	Gentamicin
+/home/chijioke/OHG_project/assembled_genome/GCA_012662725.1_PDT000660405.1_genomic.fna	AASZMD010000042.1	21338	22305	-	ant(3'')-Ia_1	1-972/972	========/======	2/4	99.59	99.59	resfinder	X02340	ant(3'')-Ia	Streptomycin
+/home/chijioke/OHG_project/assembled_genome/GCA_012662725.1_PDT000660405.1_genomic.fna	AASZMD010000162.1	7698	8665	+	ant(3'')-Ia_1	1-972/972	========/======	2/4	99.59	99.59	resfinder	X02340	ant(3'')-Ia	Streptomycin
+/home/chijioke/OHG_project/assembled_genome/GCA_012662725.1_PDT000660405.1_genomic.fna	AASZMD010000163.1	315	1181	+	sul1_5	1-867/867	===============	0/0	100.00	99.89	resfinder	EU780013	sul1	Sulfamethoxazole
+/home/chijioke/OHG_project/assembled_genome/GCA_012662725.1_PDT000660405.1_genomic.fna	AASZMD010000164.1	1	900	+	aac(3)-VIa_2	4-903/903	===============	0/0	99.67	100.00	resfinder	NC_009838	aac(3)-VIa	Gentamicin

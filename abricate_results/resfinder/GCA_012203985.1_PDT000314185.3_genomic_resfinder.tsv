@@ -1,0 +1,14 @@
+#FILE	SEQUENCE	START	END	STRAND	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT	RESISTANCE
+/home/chijioke/OHG_project/assembled_genome/GCA_012203985.1_PDT000314185.3_genomic.fna	AARYID010000015.1	28447	29684	-	mdf(A)_1	1-1233/1233	========/======	1/5	100.00	98.06	resfinder	Y08743	mdf(A)	
+/home/chijioke/OHG_project/assembled_genome/GCA_012203985.1_PDT000314185.3_genomic.fna	AARYID010000093.1	7	843	-	aph(6)-Id_1	1-837/837	===============	0/0	100.00	100.00	resfinder	M28829	aph(6)-Id	Streptomycin
+/home/chijioke/OHG_project/assembled_genome/GCA_012203985.1_PDT000314185.3_genomic.fna	AARYID010000093.1	843	1646	-	aph(3'')-Ib_5	1-804/804	===============	0/0	100.00	100.00	resfinder	AF321551	aph(3'')-Ib	Streptomycin
+/home/chijioke/OHG_project/assembled_genome/GCA_012203985.1_PDT000314185.3_genomic.fna	AARYID010000093.1	1707	2522	-	sul2_3	1-816/816	===============	0/0	100.00	100.00	resfinder	HQ840942	sul2	Sulfamethoxazole
+/home/chijioke/OHG_project/assembled_genome/GCA_012203985.1_PDT000314185.3_genomic.fna	AARYID010000101.1	1756	3002	+	tet(A)_6	1-1247/1275	===============	0/0	97.80	100.00	resfinder	AF534183	tet(A)	Doxycycline;Tetracycline
+/home/chijioke/OHG_project/assembled_genome/GCA_012203985.1_PDT000314185.3_genomic.fna	AARYID010000146.1	534	1394	-	blaTEM-1B_1	1-861/861	===============	0/0	100.00	100.00	resfinder	AY458016	blaTEM-1B	Amoxicillin;Ampicillin;Cephalothin;Piperacillin;Ticarcillin
+/home/chijioke/OHG_project/assembled_genome/GCA_012203985.1_PDT000314185.3_genomic.fna	AARYID010000164.1	42	551	+	dfrA8_1	1-510/510	===============	0/0	100.00	100.00	resfinder	U10186	dfrA8	Trimethoprim
+/home/chijioke/OHG_project/assembled_genome/GCA_012203985.1_PDT000314185.3_genomic.fna	AARYID010000260.1	1903	2718	+	sul2_3	1-816/816	===============	0/0	100.00	100.00	resfinder	HQ840942	sul2	Sulfamethoxazole
+/home/chijioke/OHG_project/assembled_genome/GCA_012203985.1_PDT000314185.3_genomic.fna	AARYID010000260.1	2779	3582	+	aph(3'')-Ib_5	1-804/804	===============	0/0	100.00	100.00	resfinder	AF321551	aph(3'')-Ib	Streptomycin
+/home/chijioke/OHG_project/assembled_genome/GCA_012203985.1_PDT000314185.3_genomic.fna	AARYID010000260.1	3582	4418	+	aph(6)-Id_1	1-837/837	===============	0/0	100.00	100.00	resfinder	M28829	aph(6)-Id	Streptomycin
+/home/chijioke/OHG_project/assembled_genome/GCA_012203985.1_PDT000314185.3_genomic.fna	AARYID010000261.1	1781	3027	+	tet(A)_6	1-1247/1275	===============	0/0	97.80	100.00	resfinder	AF534183	tet(A)	Doxycycline;Tetracycline
+/home/chijioke/OHG_project/assembled_genome/GCA_012203985.1_PDT000314185.3_genomic.fna	AARYID010000264.1	561	1421	+	blaTEM-1B_1	1-861/861	===============	0/0	100.00	100.00	resfinder	AY458016	blaTEM-1B	Amoxicillin;Ampicillin;Cephalothin;Piperacillin;Ticarcillin
+/home/chijioke/OHG_project/assembled_genome/GCA_012203985.1_PDT000314185.3_genomic.fna	AARYID010000265.1	83	592	+	dfrA8_1	1-510/510	===============	0/0	100.00	100.00	resfinder	U10186	dfrA8	Trimethoprim

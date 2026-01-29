@@ -1,0 +1,10 @@
+#FILE	SEQUENCE	START	END	STRAND	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT	RESISTANCE
+/home/chijioke/OHG_project/assembled_genome/GCA_020209965.1_PDT001141907.1_genomic.fna	ABCSYI010000004.1	26128	27360	+	mdf(A)_1	1-1233/1233	===============	0/0	100.00	98.46	resfinder	Y08743	mdf(A)	
+/home/chijioke/OHG_project/assembled_genome/GCA_020209965.1_PDT001141907.1_genomic.fna	ABCSYI010000035.1	9859	10725	-	sul1_5	1-867/867	===============	0/0	100.00	99.89	resfinder	EU780013	sul1	Sulfamethoxazole
+/home/chijioke/OHG_project/assembled_genome/GCA_020209965.1_PDT001141907.1_genomic.fna	ABCSYI010000035.1	16698	17600	-	aac(3)-VIa_2	1-903/903	===============	0/0	100.00	100.00	resfinder	NC_009838	aac(3)-VIa	Gentamicin
+/home/chijioke/OHG_project/assembled_genome/GCA_020209965.1_PDT001141907.1_genomic.fna	ABCSYI010000035.1	17764	18731	-	ant(3'')-Ia_1	1-972/972	========/======	2/4	99.59	99.38	resfinder	X02340	ant(3'')-Ia	Streptomycin
+/home/chijioke/OHG_project/assembled_genome/GCA_020209965.1_PDT001141907.1_genomic.fna	ABCSYI010000074.1	3940	4800	+	blaTEM-1B_1	1-861/861	===============	0/0	100.00	100.00	resfinder	AY458016	blaTEM-1B	Amoxicillin;Ampicillin;Cephalothin;Piperacillin;Ticarcillin
+/home/chijioke/OHG_project/assembled_genome/GCA_020209965.1_PDT001141907.1_genomic.fna	ABCSYI010000129.1	351	1217	+	sul1_5	1-867/867	===============	0/0	100.00	99.89	resfinder	EU780013	sul1	Sulfamethoxazole
+/home/chijioke/OHG_project/assembled_genome/GCA_020209965.1_PDT001141907.1_genomic.fna	ABCSYI010000132.1	5692	6659	+	ant(3'')-Ia_1	1-972/972	========/======	2/4	99.59	99.38	resfinder	X02340	ant(3'')-Ia	Streptomycin
+/home/chijioke/OHG_project/assembled_genome/GCA_020209965.1_PDT001141907.1_genomic.fna	ABCSYI010000133.1	37	939	+	aac(3)-VIa_2	1-903/903	===============	0/0	100.00	100.00	resfinder	NC_009838	aac(3)-VIa	Gentamicin
+/home/chijioke/OHG_project/assembled_genome/GCA_020209965.1_PDT001141907.1_genomic.fna	ABCSYI010000134.1	530	1390	+	blaTEM-1B_1	1-861/861	===============	0/0	100.00	100.00	resfinder	AY458016	blaTEM-1B	Amoxicillin;Ampicillin;Cephalothin;Piperacillin;Ticarcillin

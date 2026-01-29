@@ -1,0 +1,8 @@
+#FILE	SEQUENCE	START	END	STRAND	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT	RESISTANCE
+/home/chijioke/OHG_project/assembled_genome/GCA_017040335.1_PDT000954092.1_genomic.fna	DADHWI010000001.1	334587	335819	-	mdf(A)_1	1-1233/1233	===============	0/0	100.00	97.81	resfinder	Y08743	mdf(A)	
+/home/chijioke/OHG_project/assembled_genome/GCA_017040335.1_PDT000954092.1_genomic.fna	DADHWI010000026.1	30628	31503	+	blaCTX-M-14_1	1-876/876	===============	0/0	100.00	100.00	resfinder	AF252622	blaCTX-M-14	Amoxicillin;Ampicillin;Aztreonam;Cefepime;Cefotaxime;Ceftazidime;Ceftriaxone;Piperacillin;Ticarcillin
+/home/chijioke/OHG_project/assembled_genome/GCA_017040335.1_PDT000954092.1_genomic.fna	DADHWI010000092.1	2	790	-	aadA5_1	1-789/789	===============	0/0	100.00	100.00	resfinder	AF137361	aadA5	Streptomycin
+/home/chijioke/OHG_project/assembled_genome/GCA_017040335.1_PDT000954092.1_genomic.fna	DADHWI010000092.1	921	1394	-	dfrA17_1	1-474/474	===============	0/0	100.00	100.00	resfinder	FJ460238	dfrA17	Trimethoprim
+/home/chijioke/OHG_project/assembled_genome/GCA_017040335.1_PDT000954092.1_genomic.fna	DADHWI010000132.1	765	1640	+	blaCTX-M-14_1	1-876/876	===============	0/0	100.00	100.00	resfinder	AF252622	blaCTX-M-14	Amoxicillin;Ampicillin;Aztreonam;Cefepime;Cefotaxime;Ceftazidime;Ceftriaxone;Piperacillin;Ticarcillin
+/home/chijioke/OHG_project/assembled_genome/GCA_017040335.1_PDT000954092.1_genomic.fna	DADHWI010000135.1	943	1416	+	dfrA17_1	1-474/474	===============	0/0	100.00	100.00	resfinder	FJ460238	dfrA17	Trimethoprim
+/home/chijioke/OHG_project/assembled_genome/GCA_017040335.1_PDT000954092.1_genomic.fna	DADHWI010000135.1	1547	2335	+	aadA5_1	1-789/789	===============	0/0	100.00	100.00	resfinder	AF137361	aadA5	Streptomycin
