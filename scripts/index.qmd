@@ -1,0 +1,486 @@
+---
+title: |
+  <span style="font-size: 1.2em; font-weight: bold; line-height: 1.2; display: inline-block; vertical-align: middle;">
+    One Health Comparative Genomics Dashboard
+  </span>
+format: dashboard
+orientation: columns
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, echo = FALSE)
+
+# load packages
+pacman::p_load(tidyverse, bslib, bsicons, reactable, plotly, janitor, here, gt, scales, plotly, RColorBrewer, pheatmap, maps)
+```
+
+```{r}
+# Import the data 
+resfinder_fulldata <- read_csv(here("outputs/resfinder_fulldata.csv"))
+
+# 1. Presence of AMR genes by isolation source
+amr_presence <- resfinder_fulldata %>%
+  distinct(sample_id, isolation_source) %>%
+  count(isolation_source, name = "n_isolates")
+
+# Visualization 
+amr_presence_plot <- amr_presence %>% 
+  ggplot(aes(x = fct_reorder(isolation_source, desc(n_isolates)), y = n_isolates)) +
+  geom_col(fill = "steelblue") +
+  labs(
+    x = "Isolates",
+    y = "Number of Isolates"
+  ) +
+  theme_minimal() +
+  theme(panel.grid = element_blank(),
+        plot.title = element_text(size = 10, face = "semibold")
+    ) 
+
+# 2. AMR gene burden per isolate by source
+amr_burden <- resfinder_fulldata %>%
+  distinct(sample_id, gene, isolation_source) %>%
+  count(sample_id, isolation_source, name = "gene_count")
+
+# Visualization 
+amr_burden_plot <- 
+  ggplot(amr_burden, aes(x = fct_reorder(isolation_source, desc(gene_count)), y = gene_count, fill = isolation_source)) +
+  geom_boxplot(outlier.shape = NA, alpha = 0.6) +
+  geom_jitter(width = 0.2, alpha = 0.3, size = 1) +
+  labs(
+    x = "Isolation source",
+    y = "Number of AMR genes per isolate",
+    fill = "Isolation source"
+  ) +
+  theme_minimal() +
+  theme(panel.grid = element_blank(),
+        plot.title = element_text(size = 10, face = "semibold"), 
+    legend.position = "none" # to remove the legend showing the color labels
+    ) 
+
+# 3. Most frequent AMR genes overall
+top_genes <- resfinder_fulldata %>%
+  count(gene, sort = TRUE) %>%
+  slice_head(n = 15)
+
+# Visualization of top genes
+top_genes_plot <- 
+  ggplot(top_genes, aes(x = reorder(gene, n), y = n)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() +
+  labs(
+    x = "AMR gene",
+    y = "Frequency"
+  ) +
+  theme_minimal() +
+  theme(panel.grid = element_blank()
+    ) 
+
+# 4. Drug class distribution by isolation source
+drug_long <- resfinder_fulldata %>%
+  count(isolation_source, drug_class_group)
+
+# Visualization
+drug_long_plot <- 
+  ggplot(drug_long, aes(x = n, y = reorder(drug_class_group, n), fill = drug_class_group)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~isolation_source, scales = "free_x", axes = "all_x") +
+  labs(
+    x = "Count", 
+    y = "Drug Class"
+    ) +
+  scale_fill_viridis_d(option = "D") +
+  theme_bw() +
+  theme(panel.grid = element_blank(),
+         plot.title = element_text(size = 10, face = "medium"),
+        # Add vertical space between rows 
+        panel.spacing.y = unit(4, "lines"),
+        panel.spacing.x = unit(2, "lines")
+    )
+
+# 5. Drug class dominance by country
+geo_drug <- resfinder_fulldata %>%
+  distinct(sample_id, location, drug_class_group) %>%
+  count(location, drug_class_group)
+
+# Visualization
+geo_drug_plot <- 
+  ggplot(geo_drug, aes(x = n, y = reorder(drug_class_group, n), fill = drug_class_group)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~location, scales = "free_x") +
+  labs(
+    x = "Count", 
+    y = "Drug Class"
+    ) +
+  scale_fill_viridis_d(option = "D") +
+  theme_bw() +
+  theme(panel.grid = element_blank(),
+        plot.title = element_text(size = 10, face = "medium"),
+        # Add vertical space between rows 
+        panel.spacing.y = unit(4, "lines"),
+        panel.spacing.x = unit(2, "lines")
+    )
+
+# 6. Country × drug class heatmap
+# Create wide matrix
+geo_heat <- geo_drug %>%
+  pivot_wider(names_from = drug_class_group,
+              values_from = n,
+              values_fill = 0)
+
+geo_matrix <- geo_heat %>%
+  column_to_rownames("location") %>%
+  as.matrix()
+
+# Row scaling (equivalent to scale = "row")
+geo_matrix_scaled <- t(scale(t(geo_matrix)))
+
+# Apply clustering (to mimic pheatmap ordering)
+row_order <- hclust(dist(geo_matrix_scaled))$order
+col_order <- hclust(dist(t(geo_matrix_scaled)))$order
+geo_matrix_scaled <- geo_matrix_scaled[row_order, col_order]
+
+# convert back to long format
+geo_heat_long <- as.data.frame(geo_matrix_scaled) %>%
+  rownames_to_column("location") %>%
+  pivot_longer(-location,
+               names_to = "drug_class",
+               values_to = "scaled_count")
+# plot with ggplot
+geo_heat_plot <- ggplot(geo_heat_long,
+                        aes(x = drug_class,
+                            y = location,
+                            fill = scaled_count)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient2(
+  low = "navy",
+  mid = "white",
+  high = "firebrick",
+  midpoint = 0) +
+  labs(
+    x = "Drug Class",
+    y = "Country",
+    fill = "Scale"
+    ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid = element_blank()
+  )
+
+# 7. Country × resistance genes heatmap
+# Create wide matrix
+top_countries <- resfinder_fulldata %>%
+  count(location, gene, sort = TRUE) %>%
+  slice_head(n = 15) %>%
+  pivot_wider(names_from = gene,
+              values_from = n,
+              values_fill = 0)
+
+gene_matrix <- top_countries %>%
+  column_to_rownames("location") %>%
+  as.matrix()
+
+# Row scaling (equivalent to scale = "row")
+gene_matrix_scaled <- t(scale(t(gene_matrix)))
+
+# Apply clustering 
+row_order_gene <- hclust(dist(gene_matrix_scaled))$order
+col_order_gene <- hclust(dist(t(gene_matrix_scaled)))$order
+gene_matrix_scaled <- gene_matrix_scaled[row_order_gene, col_order_gene]
+
+# convert back to long format
+gene_heat_long <- as.data.frame(gene_matrix_scaled) %>%
+  rownames_to_column("location") %>%
+  pivot_longer(-location,
+               names_to = "gene",
+               values_to = "scaled_count")
+# plot with ggplot
+top_countries_plot <- ggplot(gene_heat_long,
+                             aes(x = gene,
+                                 y = location,
+                                 fill = scaled_count)) +
+  geom_tile(color = "white") +
+   scale_fill_gradient2(
+  low = "navy",
+  mid = "white",
+  high = "firebrick",
+  midpoint = 0) +
+  labs(
+    x = "Resistance Gene",
+    y = "Country",
+    fill = "Scale") +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid = element_blank()
+  )
+
+
+# 8. Trends in resistance burden over time
+# Identify top 5 (or 10) genes overall
+top_gene_list <- resfinder_fulldata %>%
+  count(gene, sort = TRUE) %>%
+  slice_head(n = 5) %>%
+  pull(gene)
+
+# count those genes per year
+top_genes_year <- resfinder_fulldata %>%
+  filter(gene %in% top_gene_list) %>%
+  count(collection_year, gene)
+
+# visualize top genes
+top_genes_trend_plot <- 
+  ggplot(top_genes_year,
+         aes(x = collection_year,
+             y = n,
+             color = gene,
+             group = gene)) +
+  geom_line(size = 1) +
+  geom_point(size = 2) +
+  labs(
+    x = "Year of collection",
+    y = "Number of detections",
+    color = "AMR Gene"
+  ) +
+  scale_color_viridis_d(option = "D") +
+  theme_minimal() +
+  theme(
+    panel.grid = element_blank(),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    plot.title = element_text(size = 12, face = "bold")
+  )
+
+# 9. # Dashboard summary metrics
+total_isolates <- resfinder_fulldata %>%
+  distinct(sample_id) %>%
+  nrow()
+
+total_genes <- resfinder_fulldata %>%
+  distinct(gene) %>%
+  nrow()
+
+total_countries <- resfinder_fulldata %>%
+  distinct(location) %>%
+  nrow()
+
+```
+
+# Overview
+
+## Column
+
+::: {.card title="Overview of the One Health Genomics Dashboard"}
+This dashboard presents a comparative genomic analysis of antimicrobial resistance (AMR) across nine countries within a One Health framework, integrating human, animal, food, and environmental isolates. The study includes 100 bacterial isolates retrieved from the National Centre for Biotechnology Information (NCBI) Pathogen Detection Portal, collected between 2018 and 2022 from the following countries:
+
+- Argentina (4 isolates)
+
+- Brazil (6 isolates)
+
+- New Zealand (10 isolates)
+
+- China (20 isolates)
+
+- France (5 isolates)
+
+- Germany (5 isolates)
+
+- Nigeria (20 isolates)
+
+- United Kingdom (10 isolates)
+
+- United States (20 isolates)
+
+These countries were intentionally selected to represent multiple continents (South America, North America, Europe, Africa, Asia, and Oceania), capture variation across diverse One Health interfaces, provide a globally comparative AMR genomic perspective, and reflect differences in antimicrobial usage policies, surveillance systems, and agricultural practices.
+
+Using ResFinder-derived resistance gene profiles, this dashboard explores:
+
+- Distribution of AMR-positive isolates by source
+
+- Resistance gene burden per isolate
+
+- Dominant drug classes by country and source
+
+- Geographic clustering of resistance patterns
+
+- Temporal trends in resistance determinants (2018–2022)
+
+Navigate through the tabs to explore resistance distribution patterns across countries, sources, and time within a global One Health context.
+:::
+
+## Column
+
+::: {.card title="Global Distribution of Study Isolates (2018–2022)"}
+
+```{r}
+
+coverage_df <- tibble(
+  country = c("Argentina","Brazil","New Zealand","China","France",
+              "Germany","Nigeria","United Kingdom","United States"),
+  isolates = c(4, 6, 10, 20, 5, 5, 20, 10, 20)
+)
+
+# Generate 9 distinct colors
+country_colors <- brewer.pal(9, "Set1")
+
+coverage_map_plotly <- plot_geo()
+
+for (i in seq_len(nrow(coverage_df))) {
+  
+  coverage_map_plotly <- coverage_map_plotly %>%
+    add_trace(
+      data = coverage_df[i, ],
+      locations = ~country,
+      locationmode = "country names",
+      z = 1,
+      type = "choropleth",
+      name = coverage_df$country[i],  # This creates legend entry
+      colorscale = list(c(0, country_colors[i]), 
+                        c(1, country_colors[i])),
+      showscale = FALSE,
+      hovertemplate = paste0(
+        "<b>", coverage_df$country[i], "</b><br>",
+        "Isolates: ", coverage_df$isolates[i],
+        "<extra></extra>"
+      )
+    )
+}
+
+coverage_map_plotly <- coverage_map_plotly %>%
+  layout(
+    geo = list(
+      showframe = FALSE,
+      showcoastlines = TRUE,
+      projection = list(type = "equirectangular")
+    ),
+    legend = list(title = list(text = "<b>Countries</b>")),
+    margin = list(l = 0, r = 0, t = 50, b = 0)
+  )
+
+coverage_map_plotly
+
+
+
+```
+:::
+
+# AMR Burden
+
+## Column {width="25%"}
+
+```{r}
+value_box(
+  title = "Total Isolates",
+  value = total_isolates,
+  showcase = bsicons::bs_icon("database"),
+  theme = "primary"
+)
+
+value_box(
+  title = "Unique AMR Genes Detected",
+  value = total_genes,
+  showcase = bsicons::bs_icon("shield-lock"),
+  theme = "danger"
+)
+
+value_box(
+  title = "Countries Represented",
+  value = total_countries,
+  showcase = bsicons::bs_icon("globe"),
+  theme = "success"
+)
+```
+
+
+## Column 
+
+### Row {.tabset}
+
+#### Distribution of AMR isolates 
+
+```{r}
+ggplotly (amr_presence_plot)
+```
+
+#### AMR gene burden 
+
+```{r}
+ggplotly (amr_burden_plot)
+```
+## Column
+::: {.card title="Top AMR genes detected across isolates"}
+```{r}
+ggplotly (top_genes_plot)
+```
+:::
+
+# Geographic Pattern
+
+## Column 1
+
+### Row {.tabset}
+
+#### Geographic Patterns of AMR
+```{r}
+ggplotly(geo_drug_plot)
+```
+
+#### AMR Dominance by Sources
+```{r}
+ggplotly(drug_long_plot)
+```
+
+## Column 2
+
+### Row {.tabset}
+
+#### Resistance Classes by country
+
+```{r}
+ggplotly(geo_heat_plot)
+```
+
+#### Resistance Genes by Country
+
+```{r}
+ggplotly(top_countries_plot)
+```
+# Temporal Dynamics
+
+## Column
+
+#### Row {width="50%"}
+
+::: {.card title="Top AMR Genes Across Collection Years"}
+```{r}
+ggplotly(top_genes_trend_plot)
+```
+:::
+
+
+# Dataset Explorer
+
+## Column
+
+::: {.card title="AMR Data"}
+
+```{r}
+
+DT::datatable(
+  resfinder_fulldata,
+  extensions = c("Buttons", "ColReorder", "FixedHeader", "Scroller", "KeyTable"),
+  #buttons will turn on the buttons feature, colreorder allows the view to rearrange the table view, fixedheader ensures that the table header is fixed at the top whle scrolling, scroller ensures that there is a scroller on the side, we dont want separate pages, keytable allows the user to select the values with their keyboard.
+  options = list( #you open the options to include everything you want
+    dom = 'Bfrtip', # this controls the layout of the table. B=buttons, f=filtering, r=processing display, t=table, i=information summary, p=pagination controls.
+    buttons = c('copy', 'csv', 'excel', 'pdf'), # the buttons that will show 
+    colReorder = TRUE, #telling R to enable the reorder option
+    fixedHeader = TRUE, #telling R to fix the header
+    scrollY = 300, #the size of the scroller on the page
+    keys = TRUE, #telling R to enable the use of keyboard to scroll through table
+    pageLength = 50, # entries that will show on the page
+    paging = TRUE), #telling R to enable pagination which is required since I am using the Scroller extension
+  filter = 'top',
+  rownames = FALSE
+  )
+```
+
+:::

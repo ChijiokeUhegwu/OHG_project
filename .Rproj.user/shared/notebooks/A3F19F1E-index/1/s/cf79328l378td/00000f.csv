@@ -1,0 +1,6 @@
+"0","value_box("
+"0","  title = ""Total Isolates"","
+"0","  value = total_isolates,"
+"0","  showcase = bsicons::bs_icon(""database""),"
+"0","  theme = ""primary"""
+"0",")"

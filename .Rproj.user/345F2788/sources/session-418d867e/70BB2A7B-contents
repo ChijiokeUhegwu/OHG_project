@@ -1,0 +1,47 @@
+library(shiny)
+library(tidyverse)
+
+amr_burden <- read_csv("outputs/amr_burden.csv")
+
+ui <- fluidPage(
+  titlePanel("Genomic AMR Surveillance Dashboard"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        "source",
+        "Isolation Source",
+        choices = unique(amr_burden$Isolation_source)
+      ),
+      selectInput(
+        "drug",
+        "Drug Class",
+        choices = unique(amr_burden$drug_class)
+      )
+    ),
+    
+    mainPanel(
+      plotOutput("amrPlot"),
+      helpText(
+        "Data represent WGS-based detection of AMR genes"
+      )
+    )
+  )
+)
+
+server <- function(input, output) {
+  
+  output$amrPlot <- renderPlot({
+    amr_burden %>%
+      filter(
+        Isolation_source == input$source,
+        drug_class == input$drug
+      ) %>%
+      ggplot(aes(Collection_year, resistant_isolates)) +
+      geom_line() +
+      geom_point() +
+      theme_minimal()
+  })
+}
+
+shinyApp(ui, server)
