@@ -24,13 +24,17 @@ The analysis pipeline spans from raw genomic data screening on Linux to visualiz
 
 ## Key Findings
 
-- Human clinical isolates carry the highest AMR gene burden, followed closely by poultry.
+- Human clinical isolates carried the highest AMR gene burden, followed closely by poultry.
 
-- China and Nigeria emerged as high-intensity MDR hotspots, while South American and New Zealand isolates showed high levels of unclassified resistance mechanisms.
+- Beta-lactam resistance emerged as the ubiquitous global baseline, dominating all sectors.
+
+- China and Nigeria exhibited the highest burden and diversity of resistance, with China uniquely characterized by a strong blaNDM-5_1 signature and Nigeria by a high blaCTX-M-15_1 burden. The UK, USA, and Germany showed more specialized resistance, while Argentina, Brazil, and New Zealand were dominated by "Unclassified" resistance mechanisms.
+
+- There was an exponential surge of blaCTX-M-15_1, which tripled in detections between 2018 and 2020.
 
 - Read the full report  [here](https://chijiokeuhegwu.github.io/OHG_project/05_report.html)
 
-- View the dashboard [here](https://chijiokeuhegwu.github.io/OHG_project/)
+- Interact with the dashboard [here](https://chijiokeuhegwu.github.io/OHG_project/)
 
 ## How to Use This Repository
 
