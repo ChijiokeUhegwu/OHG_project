@@ -1,6 +1,6 @@
 # One Health Comparative Genomics of *Escherichia coli* Isolates: Tracking Regional AMR Burden and Emerging Genetic Determinants Across Nine Nations (2018–2022)
 
-![dashboard_overview](outputs/dashboard_overview.jpeg)
+![dashboard_overview](outputs/dashboard_overview.png)
 
 
 ## Project Overview

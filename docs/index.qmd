@@ -406,12 +406,21 @@ ggplotly (amr_presence_plot)
 ```{r}
 ggplotly (amr_burden_plot)
 ```
+
 ## Column
-::: {.card title="Top AMR genes detected across isolates"}
+
+### Row {.tabset}
+
+#### Top AMR genes across isolates
 ```{r}
 ggplotly (top_genes_plot)
 ```
-:::
+
+#### Temporal Trends
+```{r}
+ggplotly(top_genes_trend_plot)
+```
+
 
 # Geographic Pattern
 
@@ -444,18 +453,6 @@ ggplotly(geo_heat_plot)
 ```{r}
 ggplotly(top_countries_plot)
 ```
-# Temporal Dynamics
-
-## Column
-
-#### Row {width="50%"}
-
-::: {.card title="Top AMR Genes Across Collection Years"}
-```{r}
-ggplotly(top_genes_trend_plot)
-```
-:::
-
 
 # Dataset Explorer
 
