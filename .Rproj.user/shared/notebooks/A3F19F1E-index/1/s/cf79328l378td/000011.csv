@@ -1,7 +1,0 @@
-"0",""
-"0","value_box("
-"0","  title = ""Unique AMR Genes Detected"","
-"0","  value = total_genes,"
-"0","  showcase = bsicons::bs_icon(""shield-lock""),"
-"0","  theme = ""danger"""
-"0",")"

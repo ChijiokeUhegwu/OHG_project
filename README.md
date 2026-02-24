@@ -28,11 +28,15 @@ The analysis pipeline spans from raw genomic data screening on Linux to visualiz
 
 - China and Nigeria emerged as high-intensity MDR hotspots, while South American and New Zealand isolates showed high levels of unclassified resistance mechanisms.
 
+- Read the full report  [here](https://chijiokeuhegwu.github.io/OHG_project/05_report.html)
+
+- View the dashboard [here](https://chijiokeuhegwu.github.io/OHG_project/)
+
 ## How to Use This Repository
 
 - /abricate_results: Contains the raw files derived from ResFinder.
 
-- /scripts: Includes the .Rmd file for data analysis and the Linux commands for ResFinder.
+- /docs: Includes the .Rmd file for data analysis and the Linux commands for ResFinder.
 
 - /outputs: High-resolution versions of the Figure 1–8 discussed in the report and the cleaned .csv file.
 

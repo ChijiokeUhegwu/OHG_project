@@ -1,1 +1,0 @@
-{"frames":[{"func":"ggplot(top_genes, aes(x = reorder(gene, n), y = n))","file":"","line_number":0,"end_line_number":0,"character_number":0,"end_character_number":0}],"message":"Error: object 'top_genes' not found\n"}

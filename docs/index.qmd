@@ -304,7 +304,7 @@ Using ResFinder-derived resistance gene profiles, this dashboard explores:
 
 - Temporal trends in resistance determinants (2018–2022)
 
-Navigate through the tabs to explore resistance distribution patterns across countries, sources, and time within a global One Health context.
+Navigate through the tabs to explore resistance distribution patterns across countries, sources, and time within a global One Health context. Read the full report [here](https://chijiokeuhegwu.github.io/OHG_project/05_report.html)
 :::
 
 ## Column

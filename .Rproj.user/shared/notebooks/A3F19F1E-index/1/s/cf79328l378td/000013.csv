@@ -1,7 +1,0 @@
-"0",""
-"0","value_box("
-"0","  title = ""Countries Represented"","
-"0","  value = total_countries,"
-"0","  showcase = bsicons::bs_icon(""globe""),"
-"0","  theme = ""success"""
-"0",")"
