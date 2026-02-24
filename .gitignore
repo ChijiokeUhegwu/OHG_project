@@ -1,3 +1,9 @@
 # Large downloaded datasets
 zip_genome/
 assembled_genome/
+
+# Rproj files
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
