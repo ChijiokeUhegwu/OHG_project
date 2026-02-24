@@ -32,9 +32,9 @@ The analysis pipeline spans from raw genomic data screening on Linux to visualiz
 
 - There was an exponential surge of blaCTX-M-15_1, which tripled in detections between 2018 and 2020.
 
-- Read the full report  [here](https://chijiokeuhegwu.github.io/OHG_project/05_report.html)
+- **Read the full report  [here](https://chijiokeuhegwu.github.io/OHG_project/05_report.html)**
 
-- Interact with the dashboard [here](https://chijiokeuhegwu.github.io/OHG_project/)
+- **Interact with the dashboard [here](https://chijiokeuhegwu.github.io/OHG_project/)**
 
 ## How to Use This Repository
 
